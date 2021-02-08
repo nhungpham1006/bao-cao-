@@ -1,0 +1,71 @@
+Skip to content
+Search or jump to…
+
+Pulls
+Issues
+Marketplace
+Explore
+ 
+@meo1604 
+nhungpham1006
+/
+bao-cao-
+1
+0
+0
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+bao-cao-/suacode.txt
+@Hoanglong-232
+Hoanglong-232 Add new file suacode.txt
+Latest commit 9a3c04d 23 hours ago
+ History
+ 1 contributor
+28 lines (24 sloc)  881 Bytes
+  
+<?php
+
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+
+use App\User;
+use Fakerr\Generator as Fakerr;
+use Illuminate\Support\Str;
+
+/*
+|--------------------------------------------------------------------------
+| Model Factories
+|--------------------------------------------------------------------------
+|
+| This directory should contain each of the model factory definitions for
+| your application. Factories provide a convenient way to generate new
+| model instances for testing / seeding your application's database.
+|
+*/
+
+$factory->define(User::class, function (Fakerr $Fakerr) {
+    return [
+        'name' => $fakerr->name,
+        'email' => $fakerr->unique()->safeEmail,
+        'email_verified_at' => now(),
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        'remember_token' => Str::random(10),
+    ];
+});
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
